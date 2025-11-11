@@ -15,27 +15,7 @@ Two improvement methods were implemented:
 2.  **Task 2 (Refining): Checkpoint Averaging** 
     * **Goal:** To produce a more stable and robust model by averaging the parameters of the final 3-5 training epochs.
 
-## Final Results
 
-Both long-running training jobs (`assignment3_2.sh` and `assignment3_task2.sh`) failed prematurely after completing all 7 epochs but before finishing their evaluation steps. The final BLEU scores were successfully recovered by running dedicated evaluation scripts (`eval.sh`, `eval_task2.sh`) on the saved checkpoints.
-
-The final results show a significant relative improvement over the baseline.
-
-| Experiment | Test Set | Baseline BLEU (Ass1) | **Final Test BLEU (Ass3)** |
-| :--- | :--- | :--- | :--- |
-| **Task 1 (Joint BPE)** | Czech (test.cz) | 0.50 | **1.47** |
-| **Task 1 (Joint BPE)** | **Slovak (sk_5k.sk)** | **0.10** | **2.00** |
-| **Task 2 (Ckpt Avg.)**| Czech (test.cz) | 0.50 | **2.02** |
-
-### Note on BLEU Scores
-
-The final test set BLEU scores (1.47, 2.02) are numerically low. All evaluation logs produced a `sacrebleu` warning: `It looks like you forgot to detokenize your test data...`. This implies the baseline (0.50) was also calculated on tokenized data.
-
-The key finding is the **relative improvement**:
-* **Task 1** improved the Slovak generalization 20-fold (0.10 $\to$ 2.00).
-* **Task 2** produced the best model, improving the Czech score 4-fold (0.50 $\to$ 2.02).
-
----
 
 ## File Descriptions
 
