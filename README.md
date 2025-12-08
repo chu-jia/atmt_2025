@@ -14,7 +14,6 @@ This repository contains the code and experimental results for **Assignment 5**.
     * Optimized `decode` and `beam_search_decode` by moving the Encoder out of the loop (Section 3).
     * Implemented **Length Penalty** logic (Section 4.1).
     * Implemented **Stopping Criteria** (Patience/N-Best) (Section 4.2).
-    * Contains answers to Questions 1-6 in comments.
 * **`translate.py`**: 
     * Fixed mask generation logic to prevent `CPUBoolType` errors during inference.
     * Updated decoder calls to use keyword arguments for compatibility.
